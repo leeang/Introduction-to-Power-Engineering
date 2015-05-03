@@ -37,3 +37,8 @@ SG2 = SD2 + S21;
 fprintf('SG1 = %f + j%f pu\n', real(SG1), imag(SG1));
 fprintf('SG2 = %f + j%f pu\n', real(SG2), imag(SG2));
 fprintf('Theta = %f degress \n', theta);
+
+% Outcomes
+% SG1 = 2.035165 + j2.116942 pu
+% SG2 = 3.300000 + j1.132491 pu
+% Theta = 11.908489 degress
