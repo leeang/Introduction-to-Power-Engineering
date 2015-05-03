@@ -10,11 +10,11 @@ Y(1, 2) = -1 / Z_TF;
 Y(2, 1) = -1 / Z_TF;
 Y(2, 2) = 1 / Z_TF;
 
-tolerrence = 1E-12;
-deltaV = 1;		% the voltage diffrence between two V1
+tolerance = 1E-12;
+deltaV = 1;		% the voltage difference between two V1
 V1 = 1;			% first try of V1
 
-while deltaV > tolerrence
+while deltaV > tolerance
 	I1 = Y(1, 1) * V1 + Y(1, 2) * V2;
 	S12 = P12 + 1i * imag( V1 * conj(I1) );
 
@@ -40,4 +40,4 @@ fprintf('SD1 = %f + j%f pu\n', real(SD1), imag(SD1));
 fprintf('SD2 = %f + j%f pu\n', real(SD2), imag(SD2));
 fprintf('S12 = %f + j%f pu\n', real(S12), imag(S12));
 fprintf('S21 = %f + j%f pu\n', real(S21), imag(S21));
-fprintf('Theta = %f degress \n', theta);
+fprintf('Theta = %f degrees \n', theta);
