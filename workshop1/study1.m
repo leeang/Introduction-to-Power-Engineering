@@ -1,18 +1,19 @@
-Csh = 0.00088;
-Z_line = 0.0455 + 0.1818i;
+Csh = 0.00088;		% Shunt Capacitance
+Z_TF = 0.0455 + 0.1818i;
 SD1 = 3.08 + 1.98i;
 SD2 = 2.2 + 1.32i;
 V1 = 0.98;
-P21 = 1.1;
+P21 = 3.3 - 2.2;	% P21 = PG2 - PD2
 
-Y(1, 1) = 1 / Z_line + (Csh * 100 * pi / 2) * 1i;
-Y(1, 2) = -1 / Z_line;
-Y(2, 1) = -1 / Z_line;
-Y(2, 2) = 1 / Z_line + (Csh * 100 * pi / 2) * 1i;
+% Y Matrix
+Y(1, 1) = 1 / Z_TF + (Csh * 100 * pi / 2) * 1i;
+Y(1, 2) = -1 / Z_TF;
+Y(2, 1) = -1 / Z_TF;
+Y(2, 2) = 1 / Z_TF + (Csh * 100 * pi / 2) * 1i;
 
 tolerrence = 1E-12;
-deltaV = 1;
-V2 = 1;
+deltaV = 1;		% the voltage diffrence between two V2
+V2 = 1;			% first try of V2
 
 while deltaV > tolerrence
 	I1 = Y(1, 1) * V1 + Y(1, 2) * V2;
@@ -22,7 +23,7 @@ while deltaV > tolerrence
 	S21 = P21 + 1i * imag( V2 * conj(I2) );
 
 	V2plus1 = (1 / Y(2, 2)) * (conj(S21 / V2) - Y(2, 1) * V1);
-	V2plus1 = V2plus1 / abs(V2plus1);
+	V2plus1 = V2plus1 / abs(V2plus1);		% ensure the absolute value of V2plus1 is 1
 
 	theta = radtodeg(angle(V2plus1));
 

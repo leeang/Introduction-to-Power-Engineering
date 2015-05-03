@@ -1,17 +1,18 @@
-Z_line = 0.1818 + 0.7273i;
+Z_TF = 0.1818 + 0.7273i;
 SD1 = 2.64 + 1.54i;
 SD2 = 1.76 + 0.66i;
 V2 = 1;
-P12 = 1.98 - 2.64;
+P12 = 1.98 - 2.64;		% P12 = PG1 - PD1
 
-Y(1, 1) = 1 / Z_line;
-Y(1, 2) = -1 / Z_line;
-Y(2, 1) = -1 / Z_line;
-Y(2, 2) = 1 / Z_line;
+% Y Matrix
+Y(1, 1) = 1 / Z_TF;
+Y(1, 2) = -1 / Z_TF;
+Y(2, 1) = -1 / Z_TF;
+Y(2, 2) = 1 / Z_TF;
 
 tolerrence = 1E-12;
-deltaV = 1;
-V1 = 1;
+deltaV = 1;		% the voltage diffrence between two V1
+V1 = 1;			% first try of V1
 
 while deltaV > tolerrence
 	I1 = Y(1, 1) * V1 + Y(1, 2) * V2;
@@ -21,7 +22,7 @@ while deltaV > tolerrence
 	S21 = V2 * conj(I2);
 
 	V1plus1 = (1 / Y(1, 1)) * (conj(S12 / V1) - Y(1, 2) * V2);
-	V1plus1 = V1plus1 / abs(V1plus1);
+	V1plus1 = V1plus1 / abs(V1plus1);		% ensure the absolute value of V1plus1 is 1
 
 	theta = radtodeg(angle(V1plus1));
 
