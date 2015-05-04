@@ -1,0 +1,31 @@
+Machine:    G2                            
+Nominal:    100 MVA   11 kV rms           
+Bus Type:   P & V generator               
+Uan phase:  11.81°                        
+Uab:        11000 Vrms [1 pu] 41.81°      
+Ubc:        11000 Vrms [1 pu] -78.19°     
+Uca:        11000 Vrms [1 pu] 161.81°     
+Ia:         18315 Arms [3.489 pu] -7.16°  
+Ib:         18315 Arms [3.489 pu] -127.16°
+Ic:         18315 Arms [3.489 pu] 112.84° 
+P:          3.3e+08 W   [3.3 pu]          
+Q:          1.1342e+08 Vars   [1.134 pu]  
+Pmec:       3.3293e+08 W   [3.329 pu]     
+Torque:     2.1195e+07 N.m   [3.329 pu]   
+Vf:         223.66 V   [3.4763 pu]        
+                                          
+Machine:    G1                            
+Nominal:    100 MVA   11 kV rms           
+Bus Type:   Swing bus                     
+Uan phase:  0.00°                         
+Uab:        10780 Vrms [0.98 pu] 30.00°   
+Ubc:        10780 Vrms [0.98 pu] -90.00°  
+Uca:        10780 Vrms [0.98 pu] 150.00°  
+Ia:         15706 Arms [2.992 pu] -46.08° 
+Ib:         15706 Arms [2.992 pu] -166.08°
+Ic:         15706 Arms [2.992 pu] 73.92°  
+P:          2.0342e+08 W   [2.034 pu]     
+Q:          2.1124e+08 Vars   [2.112 pu]  
+Pmec:       2.0558e+08 W   [2.056 pu]     
+Torque:     1.3087e+07 N.m   [2.056 pu]   
+Vf:         222.06 V   [3.4514 pu]        
