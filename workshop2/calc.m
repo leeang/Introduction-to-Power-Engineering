@@ -4,9 +4,9 @@ W_0 = 25;
 I_o = 0.29;
 
 I_oc = W_0 / V_1;
+R = V_1 / I_oc;
 
 I_om = sqrt(I_o^2 - I_oc^2);
-
 X = V_1 / I_om;
 
 %%Q2
