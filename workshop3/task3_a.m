@@ -23,6 +23,16 @@ i_d = sqrt(2) * abs(I_t) * sind(delta_i+phi_pf);
 
 i_F = (v_q + R_s * i_q + X_d * i_d) / X_dF;
 
+fprintf('v_q=%f\n', v_q);
+fprintf('i_q=%f\n', i_q);
 fprintf('i_q(RMS)=%f\n', i_q/sqrt(2));
+
+fprintf('v_d=%f\n', v_d);
+fprintf('i_d=%f\n', i_d);
 fprintf('i_d(RMS)=%f\n', i_d/sqrt(2));
+
 fprintf('i_t(RMS)=%f\n', abs(I_t));
+
+fprintf('i_F=%f\n', abs(i_F));
+
+fprintf('delta=%f\n', abs(delta));
