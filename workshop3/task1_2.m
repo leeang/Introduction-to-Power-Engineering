@@ -4,27 +4,27 @@ showTask1 = 1;
 showTask2 = 1;
 
 if showTask1
-	plot(P00(:, 1), P00(:, 2));
+	plot(P00(:, 1), P00(:, 2), 'k');
 	hold on;
-	plot(P25(:, 1), P25(:, 2));
+	plot(P25(:, 1), P25(:, 2), 'k');
 	hold on;
-	plot(P50(:, 1), P50(:, 2));
+	plot(P50(:, 1), P50(:, 2), 'k');
 	hold on;
-	plot(P90(:, 1), P90(:, 2));
+	plot(P90(:, 1), P90(:, 2), 'k');
 	hold on;
 end
 
 if showTask2
 	hold on;
-	plot(lead6(:, 1), lead6(:, 2), '.:');
+	plot(lead6(:, 1), lead6(:, 2), 'k.:');
 	hold on;
-	plot(lead8(:, 1), lead8(:, 2), '.:');
+	plot(lead8(:, 1), lead8(:, 2), 'k.:');
 	hold on;
-	plot(lag6(:, 1), lag6(:, 2), '.:');
+	plot(lag6(:, 1), lag6(:, 2), 'k.:');
 	hold on;
-	plot(lag8(:, 1), lag8(:, 2), '.:');
+	plot(lag8(:, 1), lag8(:, 2), 'k.:');
 	hold on;
-	plot(unity(:, 1), unity(:, 2), '.:');
+	plot(unity(:, 1), unity(:, 2), 'k.:');
 	hold on;
 end
 

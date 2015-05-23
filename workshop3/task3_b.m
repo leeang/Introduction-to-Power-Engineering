@@ -34,5 +34,6 @@ fprintf('i_d(RMS)=%f\n', i_d/sqrt(2));
 fprintf('i_t(RMS)=%f\n', abs(I_t));
 
 fprintf('i_F=%f\n', abs(i_F));
+fprintf('i_F(RMS)=%f\n', abs(i_F)/sqrt(2));
 
 fprintf('delta=%f\n', abs(delta_i));
