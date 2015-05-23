@@ -28,7 +28,7 @@ if showTask2
 	hold on;
 end
 
-axis([0 3 0 1.5]);
+axis([0 2.25 0 1.5]);
 xlabel('i_F (pu)');
 ylabel('|I_t| (pu)');
 
@@ -42,11 +42,11 @@ end
 if showTask2
 	pfYposition = lead6(1, 2)+0.03;
 
-	text(0.5, pfYposition, 'power factor:');
+	text(0.3, pfYposition, 'power factor:');
 
 	text(lead6(1, 1)-0.15, pfYposition, 'lead 0.6');
 	text(lead8(1, 1)-0.1, pfYposition, 'lead 0.8');
-	text(lag6(1, 1), pfYposition, 'lag 0.6');
-	text(lag8(1, 1)-0.15, pfYposition, 'lag 0.8');
+	text(lag6(1, 1)-0.05, pfYposition, 'lag 0.6');
+	text(lag8(1, 1)-0.18, pfYposition, 'lag 0.8');
 	text(unity(1, 1)-0.05, pfYposition, 'unity');
 end
