@@ -8,7 +8,9 @@ I_t = conj(S / V_t);
 R_s = 2.85E-3;
 X_q = 1.494;
 X_d = 1.536;
-X_dF = 1.551;	%Field winding inductance
+L_fd = 1.551;
+L_lfd = 0.165;
+X_dF = L_fd - L_lfd;
 
 Eq_Re = abs(V_t) + R_s * abs(I_t) * cosd(phi_pf) + X_q * abs(I_t) * sind(phi_pf);
 Eq_Im = X_q * abs(I_t) * cosd(phi_pf) - R_s * abs(I_t) * sind(phi_pf);
@@ -35,4 +37,4 @@ fprintf('i_t(RMS)=%f\n', abs(I_t));
 
 fprintf('i_F=%f\n', abs(i_F));
 
-fprintf('delta=%f\n', abs(delta));
+fprintf('delta=%f\n', abs(delta_i));
