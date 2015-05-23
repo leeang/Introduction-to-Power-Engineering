@@ -20,7 +20,6 @@ delta_i = atand(Eq_Im/Eq_Re);
 v_q = sqrt(2) * abs(V_t) * cosd(delta_i);
 i_q = sqrt(2) * abs(I_t) * cosd(delta_i+phi_pf);
 
-v_d = sqrt(2) * abs(V_t) * sind(delta_i);
 i_d = sqrt(2) * abs(I_t) * sind(delta_i+phi_pf);
 
 i_F = (v_q + R_s * i_q + X_d * i_d) / X_dF;
@@ -29,7 +28,6 @@ fprintf('v_q=%f\n', v_q);
 fprintf('i_q=%f\n', i_q);
 fprintf('i_q(RMS)=%f\n', i_q/sqrt(2));
 
-fprintf('v_d=%f\n', v_d);
 fprintf('i_d=%f\n', i_d);
 fprintf('i_d(RMS)=%f\n', i_d/sqrt(2));
 
